@@ -85,7 +85,8 @@ module.exports = {
         }),
         //生成仅包含颜色的替换样式（主题色等）
         new ThemeColorReplacer({
-            fileName: appConfig.themeFile,
+            fileName: 'css/theme-colors-[contenthash:8].css',
+            resultFileNameTo: 'src/js/themeCssUrl.js',
             matchColors: [
                 ...ThemeColorReplacer.getElementUISeries(appConfig.themeColor),  //element-ui主色系列
                 '#0cdd3a',  //自定义颜色

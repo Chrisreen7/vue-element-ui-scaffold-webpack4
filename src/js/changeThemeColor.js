@@ -1,5 +1,6 @@
 import replacer from 'webpack-theme-color-replacer/client'
 import appConfig from '../../config/app-config.js'
+import cssUrl from './themeCssUrl'
 
 // 动态切换主题色
 export default function changeThemeColor(newColor, oldColor) {
@@ -8,7 +9,7 @@ export default function changeThemeColor(newColor, oldColor) {
             oldColor: oldColor || appConfig.themeColor,
             newColor: newColor,
         },
-        cssUrl: appConfig.themeFile,
+        cssUrl,
         others: {
             oldColors: ['#0cdd3a', '#c655dd'],
             newColors: ['#ff0000', '#ffff00'],
